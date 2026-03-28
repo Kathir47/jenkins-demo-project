@@ -11,6 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'echo "Building $APP_NAME version $VERSION..."'
+                sh 'node app.js'
             }
         }
 
