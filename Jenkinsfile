@@ -30,7 +30,7 @@ pipeline {
 
         stage('Deploy to Production') {
             when {
-                branch 'main'
+                expression { env.GIT_BRANCH == 'origin/main' }
             }
             steps {
                 sh 'echo "Deploying to production server..."'
